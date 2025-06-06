@@ -1,5 +1,11 @@
 name: Get and Cache Dependencies
 description: This is get the dependencies and cache them using npm
+inputs:
+  mycominput:
+    description: Testing input for composite action
+    type: string
+    required: true
+    default: Into composite action
 runs:
   using: 'composite'
   steps:
@@ -13,3 +19,5 @@ runs:
       if: steps.cache.outputs.cache-hit != 'true'
       run: npm ci
       shell: bash
+    - name: Printing the result
+      run: echo "${{mycominput}}"

@@ -11,7 +11,9 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Load dependecies
-        uses: cnsivakumar/mytestcompositeactions@v1.0.0
+        uses: ./.github/compositeactions/cache-dependencies
+        with:
+          mycominput: Calling from main yml
 
       - name: Lint code
         run: npm run lint
