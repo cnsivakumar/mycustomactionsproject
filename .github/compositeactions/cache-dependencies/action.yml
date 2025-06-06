@@ -21,3 +21,4 @@ runs:
       shell: bash
     - name: Printing the result
       run: echo "${{inputs.mycominput}}"
+      shell: bash
