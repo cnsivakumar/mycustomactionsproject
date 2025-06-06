@@ -1,0 +1,5 @@
+name: 'Deploying S3 bucket using javascript actions'
+description: Testing Javascript action
+runs:
+  using: 'node18'
+  main: 'main.js'

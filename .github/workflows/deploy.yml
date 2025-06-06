@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Load dependecies
-        uses: ./.github/compositeactions/cache-dependencies
+        uses: ./.github/actions/compositeactions
         with:
           mycominput: Calling from main yml
 
@@ -23,7 +23,7 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: Load dependecies
-        uses: ./.github/compositeactions/cache-dependencies
+        uses: ./.github/actions/compositeactions
       - name: Test code
         id: run-tests
         run: npm run test
@@ -41,7 +41,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Load dependecies
         id: cache-output
-        uses: ./.github/compositeactions/cache-dependencies
+        uses: ./.github/actions/compositeactions
       - name: Build website
         run: npm run build
       - name: Upload artifacts
