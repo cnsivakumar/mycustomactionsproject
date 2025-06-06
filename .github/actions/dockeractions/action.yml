@@ -1,0 +1,12 @@
+name: 'Docker action'
+description: Docker action testing
+inputs:
+  message:
+    description: Input testing for docker action
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{inputs.message}}
+
