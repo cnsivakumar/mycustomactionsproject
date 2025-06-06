@@ -20,4 +20,4 @@ runs:
       run: npm ci
       shell: bash
     - name: Printing the result
-      run: echo "${{mycominput}}"
+      run: echo "${{inputs.mycominput}}"
