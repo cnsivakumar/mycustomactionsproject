@@ -6,6 +6,10 @@ inputs:
     type: string
     required: true
     default: Into composite action
+outputs:
+  mycomoutput:
+    description: Testing for Composite Output
+    value: ${{ steps.print-step.outputs.comoutput}}
 runs:
   using: 'composite'
   steps:
@@ -21,4 +25,8 @@ runs:
       shell: bash
     - name: Printing the result
       run: echo "${{inputs.mycominput}}"
+      shell: bash
+    - name: Printing the result
+      id: print-step
+      run: echo "comoutput=OutputSuccessful" >> $GITHUB_OUTPUT
       shell: bash
